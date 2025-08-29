@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(../fonts/Quicksand_Book.otf);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  color: white;
+  font-family: Quicksand;
+  font-size: 20px;
+}
+
+header{
+  margin: 0 2.5em 0 2.5em;
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/bg1.png");
+  background-size: cover;
+  min-height: 100%;
+}
+
+ul, .socials{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(205, 231, 255);
+  text-decoration: underline;
+}
