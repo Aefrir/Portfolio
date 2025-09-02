@@ -1,0 +1,39 @@
+.content{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 3em;
+  align-items: center;
+  height: 70%;
+}
+
+.intro{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex: 1.5;
+}
+
+.intro > h1{
+  font-size: 400%;
+}
+
+.side-chapters{
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  flex: 1;
+}
+
+.side-chapters article{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-image: linear-gradient(rgba(3, 0, 100, 0.589), rgba(20, 0, 75, 0.582));
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.side-chapters article>a{
+  text-decoration: underline;
+}

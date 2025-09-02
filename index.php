@@ -9,25 +9,30 @@
 		<meta name="robots" content="index,follow">
 		<title>Portfolio</title>
 		<link rel="stylesheet" href="css/stylesheet.css">
+		<link rel="stylesheet" href="css/index-style.css">
 		<script src="https://kit.fontawesome.com/a0a5e50891.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<header>
-			<h1>Portfolio</h1>
-			<nav>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-			<div class="socials">
-				<a href="#"><i class="fa-brands fa-twitter"></i></a>
-				<a href="#"><i class="fa-brands fa-facebook"></i></a>
-				<a href="#"><i class="fa-brands fa-google"></i></a>
-			</div>
-		</header>
-		<main></main>
-		<footer></footer>
+		<?php include("includes/header.php");?>
+		<main class="content">
+			<section class="intro">
+				<h1>I'm Daanphi,</h1>
+				<h3>an aspiring Web Developer</h3>
+				<p>I am an aspiring Web Developer with a passion for back-end systems and databases.</p>
+			</section>
+			<section class="side-chapters">
+				<article>
+					<h2>About me</h2>
+					<p>I have experience in various languages such as HTML, CSS, Javascript and PHP. Furthermore I've also received basic guidance in C# and Python.</p>
+					<a href="about-me.php">Learn more</a>
+				</article>
+				<article>
+					<h2>Projects / Work</h2>
+					<p>I'm still building up my experience to larger projects, but I've created smaller pages and components using HTML, CSS, and JavaScript to practice my skills and experiment with ideas.</p>
+					<a href="projects.php">Learn more</a>
+				</article>
+			</section>
+		</main>
+		<?php include("includes/footer.php");?>
 	</body>
 </html>

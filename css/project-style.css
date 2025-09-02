@@ -1,0 +1,37 @@
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.content h1{
+  font-size: 250%;
+  padding-bottom: 1em;
+}
+
+section{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2em;
+}
+
+section h4{
+  font-size: 70%;
+}
+
+article{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 0.5em;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0.7em;
+
+  flex: 1 1 33%;
+  background-image: linear-gradient(rgba(3, 0, 100, 0.589), rgba(20, 0, 75, 0.582));
+}
+
+article p{
+  font-size: 16px;
+}

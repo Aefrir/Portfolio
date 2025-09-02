@@ -80,6 +80,13 @@ ul, .socials{
   gap: 2em;
 }
 
+/* Main */
 .content{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
   padding: 3em;
+  gap: 3em;
+  height: 70%;
+  align-items: center;
 }
