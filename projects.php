@@ -19,19 +19,22 @@
       <section>
         <article>
           <h4>HTML</h4>
-          <p>In HTML I've made a table with a detailed description of all the metatags, elements, attributes that I've learned during my HTML course.</p>
+          <img src="img/html-project.png" alt="webpage of list of html elements and attributes" width="600" height="300">
+          <p>In HTML I've made a <a href="#" class="webpage-link">webpage</a> containing a table with a detailed description of all the metatags, elements, attributes that I've learned during my HTML course.</p>
+          
         </article>
         <article>
           <h4>CSS</h4>
-          <p>In CSS I've created a medical webpage of a Webshop designed in Figma.</p>
+          <img src="img/css-project.png" alt="webpage of medical webshop" width="600" height="300">
+          <p>In CSS I've created a medical <a href="#" class="webpage-link">webpage</a> of a Webshop designed in Figma.</p>
         </article>
         <article>
           <h4>SEO</h4>
-          <p></p>
+          <p>SEO is part of a webpage that you don't see as a customer hence why it is hard to show an actual product of it.</p>
         </article>
         <article>
           <h4>Javascript</h4>
-          <p>In Javascript I've learned</p>
+          <p>In Javascript I've learned how to manipulate the DOM.</p>
         </article>
         <article>
           <h4>PHP</h4>

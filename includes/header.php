@@ -2,8 +2,19 @@
 			<h1>Portfolio</h1>
 			<nav>
 				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="projects.php">Projects</a></li>
+					<li><a href="index.php">Home</i></a></li>
+					<li class="dropdown">
+						Projects<i class="fa fa-angle-down"></i>
+						<div class="dropdown-content">
+							<div class="dropdown-content-layout">
+								<a href="">HTML</a>
+								<a href="">CSS</a>
+								<a href="">SEO</a>
+								<a href="">Javascript</a>
+								<a href="">PHP</a>
+							</div>
+						</div>
+					</li>
 					<li><a href="about-me.php">About me</a></li>
 					<li><a href="contact.php">Contact</a></li>
 				</ul>

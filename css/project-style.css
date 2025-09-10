@@ -35,3 +35,7 @@ article{
 article p{
   font-size: 16px;
 }
+
+.webpage-link{
+  color: rgb(122, 195, 255);
+}
