@@ -1,92 +1,15 @@
-@font-face {
-  font-family: Quicksand;
-  src: url(../fonts/Quicksand_Book.otf);
-}
-
-@keyframes fade-up{
-  0%{
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-
-  100%{
-    opacity: 1;
-    transform: translateY(0px) scale(1);
-  }
-}
-
-header, .content, footer{
-  animation: fade-up 1s;
-  max-width: 80vw;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  height: 100%;
-  color: white;
-  font-family: Quicksand;
-  font-size: 20px;
-}
-
-a{
-  color: white;
-  text-decoration: none;
-}
-
-a:hover{
-  color: rgb(205, 231, 255);
-  text-decoration: underline;
-}
-
-/* Background */
-body{
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/bg1.png");
-  /* background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 5, 58)); */
-  background-size: cover;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Header  */
-header{
-  margin: 1em auto;
+#about-me-section {
+  min-height: 100vh;
   display: flex;
-  flex-wrap: row wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  scroll-margin-top: 150px;
 }
 
-nav li{
-  border-left: solid white 1px;
-  padding: 0 2em 0 2em;
-}
-
-nav li:last-child{
-  border-right: solid white 1px;
-}
-
-ul, .socials{
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-}
-
-.socials{
-  gap: 2em;
-}
-
-/* Main */
-.content{
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  padding: 3em;
-  gap: 3em;
-  height: 70%;
-  align-items: center;
+.about-me-content article {
+  padding: 1em;
+  background-image: linear-gradient(
+    rgba(3, 0, 100, 0.589),
+    rgba(20, 0, 75, 0.582)
+  );
 }
