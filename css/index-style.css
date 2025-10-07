@@ -27,7 +27,6 @@
 .side-chapters article {
   display: flex;
   flex-direction: column;
-  gap: 1em;
   background-image: linear-gradient(
     rgba(3, 0, 100, 0.589),
     rgba(20, 0, 75, 0.582)
@@ -38,4 +37,9 @@
 
 .side-chapters article > a {
   text-decoration: underline;
+}
+
+.side-chapters > article > h2 {
+  text-align: center;
+  margin-bottom: 10px;
 }
