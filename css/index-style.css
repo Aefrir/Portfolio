@@ -6,14 +6,14 @@
   min-height: 100vh;
 }
 
-.intro {
+.intro-left {
   display: flex;
   flex-direction: column;
   gap: 1em;
   flex: 1.5;
 }
 
-.intro > h1 {
+.intro-left > h1 {
   font-size: 400%;
 }
 
@@ -24,22 +24,15 @@
   flex: 1;
 }
 
-.side-chapters article {
+.side-chapters > article {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(
-    rgba(3, 0, 100, 0.589),
-    rgba(20, 0, 75, 0.582)
-  );
   border-radius: 10px;
+  gap: 1em;
   padding: 1em;
+  background-color: var(--standard-secondary-color);
 }
 
 .side-chapters article > a {
   text-decoration: underline;
-}
-
-.side-chapters > article > h2 {
-  text-align: center;
-  margin-bottom: 10px;
 }
