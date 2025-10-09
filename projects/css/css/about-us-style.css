@@ -1,0 +1,141 @@
+.img-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/about\ us.webp);
+  background-size: cover;
+  height: 750px;
+  width: 100%;
+}
+
+.medical-bg-wrapper{
+  background-image: url(../img/transparent-medicalbg3.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.about-uomo{
+  background-color: rgba(100, 153, 173, 0.692);
+  color: white;
+  padding: 0.5em 7em 0.5em 7em;
+}
+
+.about-uomo h1{
+  text-align: center;
+}
+
+.catchphrase{
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-content h1, .about-us-content h2, .about-us-content h3{
+  color: var(--standard-uomo-blue)
+}
+
+.about-us-content h1{
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.about-us-content h2{
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+.about-us-content h3{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.about-us-content{
+  padding-bottom: 5em;
+  max-width: 60vw;
+  margin: 0 auto;
+}
+
+.about-us-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.our-story{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article{
+  flex: 1;
+}
+
+.bottom-content{
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1200px){
+  .img-wrapper{
+    background-position: calc(50% + 45px);
+    height: 600px;
+  }
+
+  .about-us-content{
+    max-width: 90vw;  
+  }
+}
+
+@media (max-width: 425px){
+  .img-wrapper{
+    background-position: calc(50% + 30px);
+    height: 450px;
+  }
+
+  .about-uomo{
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+
+  .about-us-content{
+    max-width: 95vw;  
+  }
+
+  .medical-bg-wrapper{
+    background-image: none;
+  }
+
+  .bottom-content{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-content h3{
+    text-align: center;
+  }
+}
+
+@media (max-width: 375px){
+  .img-wrapper{
+    background-position: calc(50% + 25px);
+    height: 400px;
+  }
+
+  .about-uomo{
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+
+@media (max-width: 320px){
+  .img-wrapper{
+    background-position: calc(50% + 20px);
+    height: 350px;
+  }
+  
+  .about-uomo{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}

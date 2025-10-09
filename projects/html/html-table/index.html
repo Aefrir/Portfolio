@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+	<head>
+		<meta charset="UTF-8">
+		<title>Samenvatting HTML</title>
+		<link rel="stylesheet" href="css/stylesheet.css">
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Element</th>
+					<th>Uitleg</th>
+					<th>Demonstratie</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th colspan="3">Les 1 - Inleiding HTML</th>
+				</tr>
+				<tr>
+					<td>&lt;html&gt;</td>
+					<td>Hiermee kun je een HTML document aanmaken</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;head&gt;</td>
+					<td>Hier plaats je alle informatie over de pagina</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;body&gt;</td>
+					<td>Hier plaats je de feitelijke content van de pagina</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;title&gt;</td>
+					<td>Wordt gebruikt om je pagina een titel te geven (voor het tabblad)</td>
+					<td>(zie tabblad)</td>
+				</tr>
+				<tr>
+					<td>&lt;p&gt;</td>
+					<td>Hiermee kun je een paragraaf aanmaken</td>
+					<td><p>Dit is een paragraaf.</p></td>
+				</tr>
+				<tr>
+					<td>&lt;br&gt;</td>
+					<td>Om een nieuwe regel te beginnen</td>
+					<td>Nieuwe regel<br>beginnen.</td>
+				</tr>
+				<tr>
+					<td>&lt;strong&gt;</td>
+					<td>Hiermee kun je tekst als belangrijk markeren</td>
+					<td><strong>Bold Text</strong></td>
+				</tr>
+				<tr>
+					<td>&lt;em&gt;</td>
+					<td>Hiermee kun je tekst als benadrukt markeren</td>
+					<td><em>Text in Italics</em></td>
+				</tr>				
+				<tr>
+					<th colspan="3">Les 2 - Teksten</th>
+				</tr>
+				<tr>
+					<td>&lt;meta&gt;</td>
+					<td>Hier plaats je metagegevens plaatsen (vooral voor SEO)</td>
+					<td>n.v.t.</td>
+				</tr>				
+				<tr>
+					<td>&lt;h1&gt; t/m &lt;h6&gt;</td>
+					<td>Met deze elementen kun je headings (kopjes) maken</td>
+					<td><h3>Dit is een h3-heading</h3></td>
+				</tr>
+				<tr>
+					<td>&lt;del&gt;</td>
+					<td>De &lt;del&gt;-tag doorstreept de tekst. Meestal gebruikt met de &lt;ins&gt;-tag</td>
+					<td>Mijn auto is <del>wit</del> zwart</td>
+				</tr>
+				<tr>
+					<td>&lt;ins&gt;</td>
+					<td>De &lt;ins&gt;-tag onderstreept de tekst. Meestal gebruikt met de &lt;del&gt;-tag</td>
+					<td>League of Legends is <del>slechter</del> <ins>beter</ins> dan DotA</td>
+				</tr>
+				<tr>
+					<td>&lt;sup&gt;</td>
+					<td>De &lt;sup&gt;-tag veranderd tekst naar en superscript tekst.</td>
+					<td>De 1<sup>ste</sup> en 2<sup>de</sup> wereldoorlog speelde zich af in de 20<sup>ste</sup> eeuw.</td>
+				</tr>
+				<tr>
+					<td>&lt;sub&gt;</td>
+					<td>De &lt;sub&gt;-tag veranderd tekst naar en subscript tekst.</td>
+					<td>H<sub>2</sub>O is the chemical formula for water.</td>
+				</tr>
+				<tr>
+					<td>&lt;q&gt;</td>
+					<td>De &lt;q&gt;-tag zet een tekst in aanhalingstekens om zo te laten zien dat het een quote is.</td>
+					<td><q>The supreme art of war is to subdue the enemy without fighting</q> -Sun Tzu, The Art of War</td>
+				</tr>
+				<tr>
+					<td>&lt;blockquote&gt;</td>
+					<td>De &lt;blockquote&gt;-tag specificeerd een stuk tekst dat is gequote van een andere bron.</td>
+					<td><p>Quote van W3Schools:</p>
+						<blockquote cite="https://www.w3schools.com">W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+						Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness
+						of all content.</blockquote></td>
+				</tr>
+				<tr>
+					<td>&lt;abbr&gt;</td>
+					<td>De &lt;abbr&gt;-tag definieerd een afkorting of acroniem.</td>
+					<td><p><abbr title="Hypertext Markup Language">HTML</abbr> in combinatie met <abbr title="Cascading Style Sheets">CSS</abbr> en Javascript wordt vaak gebruikt om websites te ontwerpen.</p></td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 3 - Lijsten</th>
+				</tr>
+				<tr>
+					<td>&lt;ul&gt;</td>
+					<td>Gebruik &lt;ul&gt; wanneer de orde van de list items niet van belang is. Denk hierbij bijvoorbeeld aan een lijst van hoofdsteden in de wereld.</td>
+					<td><ul>
+						<li>Amsterdam</li>
+						<li>Brussel</li>
+						<li>Berlijn</li>
+					</ul></td>
+				</tr>
+				<tr>
+					<td>&lt;ol&gt;</td>
+					<td>Gebruik &lt;ol&gt; wannneer de orde van de list items juist wel van belang is. Denk hierbij aan een inhoudsopgave.</td>
+					<td><ol>
+						<li>Inleiding</li>
+						<li>Wat is HTML</li>
+						<li>Waarom gebruiken we HTML</li>
+						<li>Conclusie</li>
+					</ol></td>
+				</tr>
+				<tr>
+					<td>&lt;li&gt;</td>
+					<td>Wordt gebruikt in &lt;ul&gt; en &lt;ol&gt; om list items toe te voegen aan de lijsten.</td>
+					<td>Zie &lt;ul&gt; en &lt;ol&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;dl&gt;</td>
+					<td>Een &lt;dl&gt; (description list) wordt meestal gebruikt voor registers of begrippenlijsten.</td>
+					<td><dl>
+						<dt>Concurrentie</dt>
+						<dd>De onderlinge strijd om een bepaalde positie in de markt</dd>
+						<dt>Omzet</dt>
+						<dd>Het totale bedrag aan inkomsten uit de verkoop van producten en diensten in een bepaalde periode</dd>
+					</dl></td>
+				</tr>
+				<tr>
+					<td>&lt;dt&gt;</td>
+					<td>Wordt gebruikt in een description list om termen aan te leggen.</td>
+					<td>Zie &lt;dl&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;dd&gt;</td>
+					<td>Wordt gebruikt in een description list om details en/of een descriptie aan te leggen aan de termen.</td>
+					<td>Zie &lt;dl&gt;</td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 4 - Hyperlinks</th>
+				</tr>
+				<tr>
+					<td>&lt;a&gt;</td>
+					<td>Hiermee kun je een stuk tekst omzetten naar een hyperlink.</td>
+					<td><a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank">Wikipedia</a></td>
+				</tr>
+				<tr>
+					<td>&lt;iframe&gt;</td>
+					<td>Een &lt;iframe&gt; wordt gebruikt om een ​​webpagina binnen een webpagina weer te geven.</td>
+					<td><iframe src="https://www.wikipedia.org/" width="100" height="50"></iframe></td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 5 - Afbeeldingen</th>
+				</tr>
+				<tr>
+					<td>&lt;img&gt;</td>
+					<td>De &lt;img&gt;-tag wordt gebruikt om een afbeelding toe te voegen. De image die je opbrengt dien je altijd in een subdirectory te plaatsen. Verder dien je de image ook altijd een alt, title, width en height attribuut te geven.</td>
+					<td><img src="img/fatasscat.jpg" alt="Fat Wizard Cat" title="Fat Wizard Cat" height="200" width="200"></td>
+				</tr>
+				<tr>
+					<td>&lt;map&gt;</td>
+					<td>Met een &lt;map&gt; kun je in een image op meerdere punten klikken of met je muis er over heen zweven om bijvoorbeeld tekst te zien. In dit geval kun je met je muis over de staff en/of gezicht zweven om een kleine beschrijving te zien.</td>
+					<td><img src="img/fatasscat.jpg" alt="Fat Wizard Cat" title="Fat Wizard Cat" height="200" width="200" usemap="#fatwizardcat">
+					<map name="fatwizardcat">
+						<area shape="circle" coords="75,100,50" alt="Fat wizard cat face" title="Fat wizard cat face">
+						<area shape="rect" coords="0, 0, 10, 180" alt="Fat wizard cat staff" title="Fat wizard cat staff">
+					</map></td>
+				</tr>
+				<tr>
+					<td>&lt;object&gt;</td>
+					<td>De &lt;object&gt; tag definieert een container voor een externe source. De voordeel van &lt;object&gt; is dat je een fallback kan maken voor het geval als de browser de source niet herkent. </td>
+					<td>
+						<object data="img/fatasscat.jpg" width="200" height="200">
+							Uw browser ondersteunt geen JPG.
+						</object>
+					</td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 6 - Tabellen</th>
+				</tr>
+				<tr>
+					<td>&lt;table&gt;</td>
+					<td>Hiermee kun je een tabel creëren</td>
+					<td>
+						<table>
+							<caption>Filler caption</caption>
+							<th colspan="3">&lt;th&gt;</th>
+							<tr>
+								<td>1 rij van &lt;td&gt; is 1 &lt;tr&gt;</td>
+								<td>&lt;td&gt;</td>
+								<td>&lt;td&gt;</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;th&gt;</td>
+					<td>Definieert een headercel in een HTML-tabel.</td>
+					<td>Zie &lt;table&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;tr&gt;</td>
+					<td>Definieert een rij in een HTML-tabel.</td>
+					<td>Zie &lt;table&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;td&gt;</td>
+					<td>Definieert een cel in een HTML-tabel.</td>
+					<td>Zie &lt;table&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;caption&gt;</td>
+					<td>Met het &lt;caption&gt; element kun je een bijschrift toevoegen aan de tabel.</td>
+					<td>Zie &lt;table&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;thead&gt;</td>
+					<td>Het gebruik van &lt;thead&gt; biedt semantische structuur aan de tabel.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;tbody&gt;</td>
+					<td>Het gebruik van &lt;tbody&gt; biedt semantische structuur aan de tabel.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;tfoot&gt;</td>
+					<td>Het gebruik van &lt;tfoot&gt; biedt semantische structuur aan de tabel.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 7 - Metagegevens</th>
+				</tr>
+				<tr>
+					<td>&lt;base&gt;</td>
+					<td>Hiermee kun je de beginpunt van je website specificeren. Door een base in te stellen zullen alle relatieven paden vanuit de bron beginnen.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;link&gt;</td>
+					<td>Met de &lt;link&gt; tag kun je een relatie maken tussen de huidige document en een externe source.</td>
+					<td>&lt;link rel="stylesheet" href="css/stylesheet.css"&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;script&gt;</td>
+					<td>
+						<dl>
+							<dt>&lt;script src&gt;</dt>
+							<dd>Met &lt;script src&gt; leg je een relatie aan met de huidige document en een externe script source.</dd>
+							<dt>&lt;script&gt;</dt>
+							<dd>&lt;script&gt; wordt gebruikt om een ​​client-side script in te sluiten</dd>
+						</dl>
+					</td>
+					<td>&lt;script src="js/script.js"&gt;&lt;/script&gt;</td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 8 - Formulieren</th>
+				</tr>
+				<tr>
+					<td>&lt;form&gt;</td>
+					<td>Hiermee creër je een formulier</td>
+					<td>
+						&lt;form action="#" method="get"&gt;&lt;/form&gt;
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td>Hiermee creër je een invoerveld waarin de gebruiker data kan invoeren.</td>
+					<td><input type="text" id="filler-input"></td>
+				</tr>
+				<tr>
+					<td>&lt;label&gt;</td>
+					<td>Hiermee geef je een betekenis aan de invoerveld en weet de gebruiker wat er in de invoerveld moet worden ingevoerd.</td>
+					<td><label for="username">Username:</label><br>
+						<input type="text" id="username">
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;select&gt;</td>
+					<td>Hiermee creër je een dropdown met een aantal opties. Dit kan een alternatief zijn voor radiobuttons en bespaart ruimte. </td>
+					<td>
+						<label for="filler">Filler Label:</label><br><br>
+						<select name="filler">
+							<option>Filler Option 1</option>
+							<option>Filler Option 2</option>
+							<option>Filler Option 3</option>
+							<option>Filler Option 4</option>
+							<option>Filler Option 5</option>
+							<option>Filler Option 6</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;option&gt;</td>
+					<td>Wordt in combinatie gebruikt met &lt;select&gt;. Hiermee kun je verschillende opties toevoegen aan de &lt;select&gt; dropdown.</td>
+					<td>&lt;option&gt;Filler&lt;/option&gt;</td>
+				</tr>
+				<tr>
+					<td>&lt;textarea&gt;</td>
+					<td>Hiermee creër je een grotere invoerveld voor bijvoorbeeld opmerkingen of commentaar.</td>
+					<td>
+						<label for="opmerkingen">Opmerkingen:</label><br>
+						<textarea name="Opmerkingen" id="opmerkingen"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 9 - Media</th>
+				</tr>
+				<tr>
+					<td>&lt;audio&gt;</td>
+					<td>Hiermee kun je een audio bestand embedden op je pagina</td>
+					<td>
+						<audio controls muted>
+							<source src="audio/Miss RGB - The Bikini Bottoms (VTuber Original Song) Shylily, Akuma Nihmune, Bao The Whale.wav" type="audio/wav">
+							Your browser does not support the audio element.
+						</audio>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;source&gt;</td>
+					<td>De &lt;source&gt; tag wordt gebruikt als je meerdere soorten bestandstypes hebt. Dit is handig, omdat het dan de volgende bestand probeert af te spelen als de vorige niet is ondersteund.</td>
+					<td>&lt;source src="audio/file.mp3" type=audio/mp3&gt;<br>
+						&lt;source src="audio/file.mp4" type=audio/mp4&gt;<br>
+						&lt;source src="audio/file.wav" type=audio/wav&gt;
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;video&gt;</td>
+					<td>Hiermee kun je een video bestand embedden op je pagina</td>
+					<td>
+						<video controls autoplay muted>
+							<source src="video/Miss RGB - The Bikini Bottoms (VTuber Original Song) Shylily, Akuma Nihmune, Bao The Whale.mp4" type="video/mp4">
+							Video source is niet ondersteund.
+						</video>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;embed&gt;</td>
+					<td>Hiermee kun je sources embedden die niet meer worden ondersteund op nieuwere browsers, maar wel op oudere versies.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;canvas&gt;</td>
+					<td>Hiermee creër je een container waarin je kan illustreren met behulp van Javascript.</td>
+					<td><canvas width="100" height="100"></canvas></td>
+				</tr>
+				<tr>
+					<th colspan="3">Les 10 - Divisies</th>
+				</tr>
+				<tr>
+					<td>&lt;div&gt;</td>
+					<td>Met de &lt;div&gt; tag kun je je pagina in logische blokken verdelen.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;header&gt;</td>
+					<td>De &lt;header&gt; tag gebruik je voor de kop van de pagina. Verder brengt de &lt;header&gt; tag ook semantische waarde.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;footer&gt;</td>
+					<td>De &lt;footer&gt; tag gebruik je voor de kop van de pagina. Verder brengt de &lt;footer&gt; tag ook semantische waarde.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;nav&gt;</td>
+					<td>De &lt;nav&gt; tag gebruik je voor de kop van de pagina. Verder brengt de &lt;nav&gt; tag ook semantische waarde.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;section&gt;</td>
+					<td>De &lt;section&gt; tag bevat de main content van je pagina. Je gebruikt sections wanneer content blokken samen deel maken van een groter geheel.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;article&gt;</td>
+					<td>Articles gebruik je wanneer de content blokken juist niet deel maken van een groter geheel, maar opzich zelf staan.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;aside&gt;</td>
+					<td>De &lt;aside&gt; tag gebruik je voor ondersteunend content die ongeveer te maken heeft met de main content.</td>
+					<td>n.v.t.</td>
+				</tr>
+				<tr>
+					<td>&lt;figure&gt;</td>
+					<td>De &lt;figure&gt; tag is ook deel van je content, maar in plaats van tekst, omhuls je een afbeelding. Een figure is ook automatisch een losstaand element en begint op een nieuwe regel.</td>
+					<td>
+						<figure>
+							<img src="img/fatasscat.jpg" width="100" height="100">
+							<figcaption>Fat ass wizard cat</figcaption>
+						</figure>
+					</td>
+				</tr>
+				<tr>
+					<td>&lt;figcaption&gt;</td>
+					<td>Een &lt;figcaption&gt; geeft een descriptie aan een figure.</td>
+					<td>Zie &lt;figure&gt;</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

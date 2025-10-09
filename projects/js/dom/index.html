@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="robots" content="noindex,follow">
+    <script defer src="js/script.js"></script>
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<title>
+			Opdracht
+		</title>
+	</head>
+	<body>
+		<form id="element-form">
+			<label for="elementSelector">Choose an element:</label><br>
+			<select id="elementSelector" name="element">
+				<option value="h1">h1</option>
+				<option value="h2">h2</option>
+				<option value="h3">h3</option>
+				<option value="p">p</option>
+				<option value="blockquote">blockquote</option>
+			</select><br><br>
+			<label for="text">Text:</label><br>
+			<input type="text" id="text" name="text"><br><br>
+			<label for="fontSelector">Choose a font family:</label><br>
+			<select id="fontSelector" name="font">
+				<option value="Arial">Arial</option>
+				<option value="Calibri">Calibri</option>
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Verdana">Verdana</option>
+				<option value="Georgia">Georgia</option>
+			</select><br><br>
+			<label for="input-bg-color">Choose a background color:</label><br>
+			<input type="color" id="input-bg-color" value="#FFFFFF"name="background color"><br><br>
+			<label for="input-text-color">Choose a text color:</label><br>
+			<input type="color" id="input-text-color" name="text color"><br><br>
+			<label for="input-font-size">Fill in a number for the font size:</label><br>
+			<input type="number" id="input-font-size" name="font size"><br><br>
+			<input type="submit" id="submit" value="Submit">
+			<!-- <button id="delete">Delete</button> -->
+		</form>
+		<sub>*Click on element to delete</sub>
+		<hr>
+		<div id="container">
+			
+		</div>
+	</body>
+</html>

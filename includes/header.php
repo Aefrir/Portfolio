@@ -1,6 +1,6 @@
 		<header>
 			<div class="header-content">
-				<h1>Portfolio</h1>
+				<a href="#top" class="home-button"><h1>Portfolio</h1></a>
 				<nav>
 					<ul>
 						<li><a href="#top">Home</i></a></li>

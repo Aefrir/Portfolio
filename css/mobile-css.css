@@ -1,0 +1,63 @@
+main {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+body {
+  background-position: center;
+}
+
+header {
+  position: initial;
+}
+
+.header-content {
+  margin: 0 0 1em;
+  flex-direction: column;
+}
+
+.home-button {
+  padding-top: 1em;
+}
+
+.intro-content {
+  flex-direction: column;
+  gap: 3em;
+}
+
+.intro-left {
+  margin-top: 3em;
+  text-align: center;
+}
+
+.divider {
+  flex-direction: column;
+}
+
+.project-content {
+  flex-direction: column;
+}
+
+.project-content > article {
+  max-width: initial;
+}
+
+.project-images {
+  margin: 1em;
+}
+
+.top-section {
+  height: auto;
+}
+
+.bottom-section {
+  min-height: 100px;
+}
+
+#contact-section {
+  scroll-margin-top: 50px;
+}
+
+.contact-content {
+  flex-direction: column;
+}

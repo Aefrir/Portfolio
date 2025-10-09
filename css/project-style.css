@@ -8,7 +8,8 @@
 
 .project-content {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 2em;
   justify-content: center;
 }
@@ -32,6 +33,7 @@
 .project-images {
   width: 90%;
   height: auto;
+  aspect-ratio: 16/9;
 }
 
 .page-link {
@@ -55,5 +57,29 @@
   padding: 1em;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  min-height: 150px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.project-link {
+  width: fit-content;
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: var(--standard-primary-color);
+}
+
+.project-link:hover {
+  text-decoration: none;
+  background-color: var(--standard-primary-color-darker);
+  box-shadow: 0 0 5px var(--standard-secondary-color-darker);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
 }

@@ -1,6 +1,8 @@
 :root {
   --standard-primary-color: rgb(45, 60, 150);
+  --standard-primary-color-darker: rgb(28, 39, 104);
   --standard-secondary-color: rgb(24, 22, 78);
+  --standard-secondary-color-darker: rgb(13, 12, 48);
   --heading-color: rgb(123, 245, 239);
 }
 
@@ -30,6 +32,7 @@ footer {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -61,7 +64,7 @@ a:hover {
 /* Background */
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../img/bg1.png");
+    url("../img/bg1.webp");
   /* background-image: linear-gradient(rgb(0, 0, 0), rgb(18, 5, 58)); */
   background-size: cover;
   min-height: 100%;
@@ -81,9 +84,9 @@ header {
 .header-content {
   margin: 1em auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   gap: 2em;
   padding-left: 3em;
   padding-right: 3em;
@@ -111,12 +114,14 @@ ul {
 
 /* Main */
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
   padding-left: 3em;
   padding-right: 3em;
 }
 
 h2 {
-  margin-top: 3em;
   margin-bottom: 1em;
   font-size: 250%;
 }

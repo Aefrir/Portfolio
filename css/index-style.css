@@ -1,3 +1,8 @@
+.home-button:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .intro-content {
   display: flex;
   flex-direction: row;
@@ -33,6 +38,6 @@
   background-color: var(--standard-secondary-color);
 }
 
-.side-chapters article > a {
+.learn-more {
   text-decoration: underline;
 }
