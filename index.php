@@ -13,7 +13,8 @@
 		<link rel="stylesheet" href="css/project-style.css">
 		<link rel="stylesheet" href="css/about-me-style.css">
 		<link rel="stylesheet" href="css/contact-style.css">
-		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="css/mobile-css.css">
+		<link rel="stylesheet" media="screen and (max-width: 1000px)" href="css/mobile.css">
+		<link rel="stylesheet" media="screen and (max-width: 425px)" href="css/mobile-small.css">
 		<script src="https://kit.fontawesome.com/a0a5e50891.js" crossorigin="anonymous"></script>
 	</head>
 	<body>

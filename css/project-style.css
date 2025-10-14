@@ -34,6 +34,7 @@
   width: 90%;
   height: auto;
   aspect-ratio: 16/9;
+  margin: 1em;
 }
 
 .page-link {
@@ -49,7 +50,7 @@
   padding: 1em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: 300px;
+  min-height: 300px;
 }
 
 .bottom-section {

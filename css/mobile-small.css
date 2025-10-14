@@ -1,0 +1,28 @@
+.intro-left > h1 {
+  font-size: 300%;
+}
+
+ul {
+  flex-direction: column;
+  gap: 1em;
+}
+
+ul > li {
+  border-left: none;
+}
+
+ul > li:last-child {
+  border-right: none;
+}
+
+.top-section {
+  min-height: 0;
+}
+
+.project-images {
+  margin: 0em;
+}
+
+.links {
+  gap: 1em;
+}
