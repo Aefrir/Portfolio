@@ -1,5 +1,10 @@
-.intro-left > h1 {
-  font-size: 300%;
+/* header {
+  display: none;
+  height: 100vh;
+} */
+
+h1 {
+  text-align: center;
 }
 
 ul {
@@ -13,6 +18,10 @@ ul > li {
 
 ul > li:last-child {
   border-right: none;
+}
+
+.intro-left > h1 {
+  font-size: 300%;
 }
 
 .top-section {

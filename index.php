@@ -1,5 +1,14 @@
 <?php
-	
+	$to = "you@example.com";
+	$subject = "Mail Test";
+	$message = "This is a test email sent from PHP.";
+	$headers = "From: no-reply@yourdomain.com";
+
+	if (mail($to, $subject, $message, $headers)) {
+			echo "✅ Mail sent successfully!";
+	} else {
+			echo "❌ Mail failed to send.";
+	}
 ?>
 <!DOCTYPE html>
 <html lang="nl">
