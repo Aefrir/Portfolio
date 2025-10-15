@@ -135,7 +135,15 @@ article > h3 {
 }
 
 article,
-.contact-row {
+.contact-left,
+.contact-row,
+.top-section {
+  filter: drop-shadow(0 0 0.75rem rgba(67, 64, 160, 0.637));
+}
+
+article,
+.contact-row,
+.contact-left {
   background-color: rgba(24, 22, 78, 0.637);
 }
 
