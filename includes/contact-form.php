@@ -3,35 +3,35 @@
   <section class="contact-content">
     <section class="contact-left">
       <h3>Contact me</h3>
-      <form method="post">
+      <form method="post" action="index.php#contact-section">
         <div class="form-row">
           <label for="">Name</label>
-          <input type="text" name="name" id="name" placeholder="Enter your name" value="<?= $name ? $name : ''?>" required>
+          <input type="text" name="name" id="name" placeholder="Enter your name" value="<?= $name ? $name : ''?>" >
           <?php if (!empty($nameError)){ ?>
             <p class="error"><?php echo $nameError; ?></p>
           <?php } ?>
         </div>
         <div class="form-row">
           <label for="">Email</label>
-          <input type="text" name="email" id="email" placeholder="Enter your email" value="<?= $email ? $email : ''?>" required>
+          <input type="text" name="email" id="email" placeholder="Enter your email" value="<?= $email ? $email : ''?>" >
           <?php if (!empty($emailError)){ ?>
             <p class="error"><?php echo $emailError; ?></p>
           <?php } ?>
         </div>
         <div class="form-row">
           <label for="">Message</label>
-          <textarea name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
+          <textarea name="message" id="message" rows="4" placeholder="Enter your message"></textarea>
           <?php if (!empty($messageError)){ ?>
             <p class="error"><?php echo $messageError; ?></p>
           <?php } ?>
         </div>
         <input type="submit" id="submit" value="Submit" name="submit">
-        <?php if (!empty($sendError)){ ?>
-          <p class="error"><?php echo $sendError; ?></p>
-        <?php }  
-        else { 
-          echo '<p>'.$success.'</p>';  
-        } ?>
+        <?php if(isset($_GET['success'])): ?>
+          <p>Bericht is succesvol verzonden!</p>
+        <?php endif; ?>
+        <?php if(!empty($sendError)): ?>
+          <p class="error"><?= $sendError ?></p>
+        <?php endif; ?>
       </form>
     </section>
     <section class="contact-right">

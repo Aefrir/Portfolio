@@ -2,7 +2,6 @@
 	$to = 'daanphin@gmail.com';
 	$name = $email = $message = '';
 	$subject = $headers = '';
-	$success = '';
 	$nameError = $emailError = $messageError = $sendError = '';
 
 	if (isset($_POST['submit'])){
@@ -33,8 +32,7 @@
 			$headers = "From: no-reply@yourdomain.com\r\nReply-To: $email";
 
 			if(mail($to, $subject, $message, $headers)){
-        $success = 'Bericht is succesvol verzonden!';
-				header("Location: index.php#contact-section");
+				header("Location: index.php?success=1#contact-section");
 				exit;
       } else {
         $sendError = 'Er is iets misgegaan bij het verzenden.';
