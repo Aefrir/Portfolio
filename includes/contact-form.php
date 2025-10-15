@@ -28,7 +28,10 @@
         <input type="submit" id="submit" value="Submit" name="submit">
         <?php if (!empty($sendError)){ ?>
           <p class="error"><?php echo $sendError; ?></p>
-        <?php } ?>
+        <?php }  
+        else{ ?>
+          <p><?php echo $success; ?></p>  
+        <?php> } ?>
       </form>
     </section>
     <section class="contact-right">
