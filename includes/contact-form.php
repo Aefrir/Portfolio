@@ -29,9 +29,9 @@
         <?php if (!empty($sendError)){ ?>
           <p class="error"><?php echo $sendError; ?></p>
         <?php }  
-        else{ ?>
-          <p><?php echo $success; ?></p>  
-        <?php> } ?>
+        else { 
+          echo '<p>'.$success.'</p>';  
+        } ?>
       </form>
     </section>
     <section class="contact-right">
