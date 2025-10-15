@@ -1,5 +1,5 @@
 <?php
-	include("includes/validation-and-processing/form-handling.php");
+	include("includes/validation-and-processing/form-handling.php")
 ?>
 <!DOCTYPE html>
 <html lang="nl">

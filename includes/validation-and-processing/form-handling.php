@@ -34,11 +34,11 @@
 
 			if(mail($to, $subject, $message, $headers)){
         $success = 'Bericht is succesvol verzonden!';
+				header("Location: index.php#contact-section");
+				exit;
       } else {
         $sendError = 'Er is iets misgegaan bij het verzenden.';
       }
 		}
-		header("Location: index.php#contact-section");
-    exit;
 	}
 ?>
