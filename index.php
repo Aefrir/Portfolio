@@ -1,13 +1,43 @@
 <?php
-	$to = "you@example.com";
-	$subject = "Mail Test";
-	$message = "This is a test email sent from PHP.";
-	$headers = "From: no-reply@yourdomain.com";
+	$to = 'daanphin@gmail.com';
+	$name = $email = $message = '';
+	$subject = $headers = '';
+	$success = '';
+	$nameError = $emailError = $messageError = $sendError = '';
 
-	if (mail($to, $subject, $message, $headers)) {
-			echo "✅ Mail sent successfully!";
-	} else {
-			echo "❌ Mail failed to send.";
+	if (isset($_POST['submit'])){
+		if(!empty($_POST['name'])){
+			$name = htmlspecialchars($_POST['name']);
+		}	
+		else{
+      $nameError = 'Naam is verplicht.';
+    }
+		if(!empty($_POST['email'])) {
+			$email = htmlspecialchars($_POST['email']);
+			if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$emailError = 'Dit is een ongeldige email.';
+			}
+		}
+		else{
+			$emailError = 'Email is verplicht.';
+		}
+		if(!empty($_POST['message'])) {
+			$message = htmlspecialchars($_POST['message']);
+		}
+		else{
+			$messageError = 'Geen bericht ingevuld.';
+		}
+
+		if(empty($nameError) && empty($emailError) && empty($messageError)){
+			$subject = 'Message from: '.$name;
+			$headers = "From: no-reply@yourdomain.com\r\nReply-To: $email";
+
+			if(mail($to, $subject, $message, $headers)){
+        $success = 'Bericht is succesvol verzonden!';
+      } else {
+        $sendError = 'Er is iets misgegaan bij het verzenden.';
+      }
+		}
 	}
 ?>
 <!DOCTYPE html>
@@ -65,8 +95,8 @@
 						</article>
 						<article>
 							<h3>Future Plans</h3>
-							<p>Looking ahead, I aim to deepen my expertise by studying advanced topics such as SQL, MySQL and design patterns. I want to strengthen both my backend and architectural understanding, allowing me to build web applications that are not only visually engaging but also efficient and scalable.</p>
-							<p>My long-term goal is to grow into a well-rounded developer who can bridge creativity and technical precision in every project I take on.</p>
+							<p>Looking ahead, I plan to deepen my expertise in SQL, MySQL, and design patterns, while also exploring modern frameworks like Laravel and .NET. This will strengthen my backend and architectural skills, enabling me to build web applications that are both efficient and visually engaging.</p>
+							<p>My long-term goal is to become a well-rounded developer who bridges creativity and technical precision in every project.</p>
 						</article>
 					</section>
 				</div>
@@ -163,17 +193,29 @@
 						<form action="index.php" method="post">
 							<div class="form-row">
 								<label for="">Name</label>
-								<input type="text" name="" id="" placeholder="Enter your name">
+								<input type="text" name="name" id="name" placeholder="Enter your name" value="<?= $name ? $name : ''?>" >
+								<?php if (!empty($nameError)){ ?>
+                  <p class="error"><?php echo $nameError; ?></p>
+                <?php } ?>
 							</div>
 							<div class="form-row">
 								<label for="">Email</label>
-								<input type="text" name="" id="" placeholder="Enter your email" required>
+								<input type="text" name="email" id="email" placeholder="Enter your email" value="<?= $email ? $email : ''?>" >
+								<?php if (!empty($emailError)){ ?>
+                  <p class="error"><?php echo $emailError; ?></p>
+                <?php } ?>
 							</div>
 							<div class="form-row">
 								<label for="">Message</label>
-								<textarea name="" id="" rows="4" placeholder="Enter your message"></textarea>
+								<textarea name="message" id="message" rows="4" placeholder="Enter your message"></textarea>
+								<?php if (!empty($messageError)){ ?>
+									<p class="error"><?php echo $messageError; ?></p>
+								<?php } ?>
 							</div>
-							<input type="submit" value="Submit" name="">
+							<input type="submit" id="submit" value="Submit" name="submit">
+							<?php if (!empty($sendError)){ ?>
+								<p class="error"><?php echo $sendError; ?></p>
+							<?php } ?>
 						</form>
 					</section>
 					<section class="contact-right">

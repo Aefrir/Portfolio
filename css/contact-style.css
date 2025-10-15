@@ -83,3 +83,8 @@ input[type="submit"]:hover {
   gap: 1em;
   list-style-type: none;
 }
+
+.error {
+  color: red;
+  margin-top: 1em;
+}
