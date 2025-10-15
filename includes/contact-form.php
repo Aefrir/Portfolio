@@ -6,21 +6,21 @@
       <form method="post">
         <div class="form-row">
           <label for="">Name</label>
-          <input type="text" name="name" id="name" placeholder="Enter your name" value="<?= $name ? $name : ''?>" >
+          <input type="text" name="name" id="name" placeholder="Enter your name" value="<?= $name ? $name : ''?>" required>
           <?php if (!empty($nameError)){ ?>
             <p class="error"><?php echo $nameError; ?></p>
           <?php } ?>
         </div>
         <div class="form-row">
           <label for="">Email</label>
-          <input type="text" name="email" id="email" placeholder="Enter your email" value="<?= $email ? $email : ''?>" >
+          <input type="text" name="email" id="email" placeholder="Enter your email" value="<?= $email ? $email : ''?>" required>
           <?php if (!empty($emailError)){ ?>
             <p class="error"><?php echo $emailError; ?></p>
           <?php } ?>
         </div>
         <div class="form-row">
           <label for="">Message</label>
-          <textarea name="message" id="message" rows="4" placeholder="Enter your message"></textarea>
+          <textarea name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
           <?php if (!empty($messageError)){ ?>
             <p class="error"><?php echo $messageError; ?></p>
           <?php } ?>
