@@ -139,16 +139,18 @@ article,
 .contact-row,
 .top-section {
   filter: drop-shadow(0 0 0.75rem rgba(67, 64, 160, 0.637));
+  backdrop-filter: blur(10px);
+  border-top: solid rgba(255, 255, 255, 0.233) 1px;
 }
 
 article,
 .contact-row,
 .contact-left {
-  background-color: rgba(24, 22, 78, 0.637);
+  background-color: rgba(24, 22, 78, 0.801);
 }
 
 .top-section {
-  background-color: rgba(45, 61, 150, 0.644);
+  background-color: rgba(45, 61, 150, 0.807);
 }
 
 /* Footer */

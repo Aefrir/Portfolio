@@ -26,10 +26,12 @@ ul > li:last-child {
 
 .top-section {
   min-height: 0;
+  width: 100%;
 }
 
 .project-images {
   margin: 0em;
+  display: none;
 }
 
 .links {
