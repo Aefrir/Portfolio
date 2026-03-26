@@ -1,0 +1,27 @@
+@media (max-width: 700px){
+    .nav-content{
+        flex-direction: column;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    nav ul{
+        margin-bottom: 1em;
+    }
+    
+    .main-content{
+        flex-direction: column;
+    }
+
+    .filters{
+        order: -1;
+    }
+
+    .article-list{
+        order: 0;
+    }
+
+    .article-preview{
+        flex-direction: column;
+    }
+}

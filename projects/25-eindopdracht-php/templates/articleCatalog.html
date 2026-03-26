@@ -1,0 +1,104 @@
+{# Child template "articleCatalog.html" #}
+{% extends "base.html" %}
+{% block title %}Filler{% endblock %}
+{% block styles %}
+<link type="text/css" rel="stylesheet" href="css/articleCatalog.css">
+<link type="text/css" rel="stylesheet" href="css/articleListingStructure.css">
+{% endblock %}
+{% block content %}
+<main>
+    <section class="main-content">
+        <section class="article-list">
+            <div class="home-title">
+                {% if category %}
+                    <h2 class="left-side-title">{{category}} Articles</h2>
+                {% else %}
+                    <h2 class="left-side-title">All Articles</h2>
+                {% endif %}
+                <hr class="title-divider">
+            </div>
+            {% if articles|length == 0 %}
+                <span class="search-results">0 articles found</span>
+            {% else %}
+                <span class="search-results">{{totalArticles}} articles found</span>
+                {% for article in articles|slice(0, 10) %}
+                <article class="article-preview">
+                    <div class="article-image">
+                        <a href="./{{article.categoryslug}}/{{article.titleslug}}"><img src="uploads/{{article.image}}" alt="{{article.image}}" width="200" height="200"></a>
+                    </div>
+                    <div class="article-preview-right">
+                        <div class="article-preview-top">
+                            <h3>
+                                <a class="article-titles" href="./{{article.categoryslug}}/{{article.titleslug}}">{{article.title}}</a>
+                            </h3>
+                            <p class="article-preview-credits">
+                                <span class="article-preview-category">{{article.category}}</span> - by 
+                                <span class="credits">{{article.author}}</span> on 
+                                <span class="credits">{{article.date|date('Y-m-d') }}</span>
+                            </p>
+                        </div>
+                        <div class="article-preview-bottom">
+                            <p class="excerpt">{{article.excerpt|raw}}</p>
+                        </div>
+                    </div>
+                </article>
+                <hr class="preview-divider">
+                {% endfor %}
+            {% endif %}
+            <ul class="pagination">
+                {{pagination|raw}}
+            </ul>
+        </section>
+       
+        <section class="right-side filters">
+            <div class="home-title">
+                <h3>Filters</h3>
+                <hr class="title-divider">
+            </div>
+            <form method="get" class="filter-form">
+                <div class="form-row">
+                    <label>Search By:</label>
+                    <div class="form-row2">
+                        <div class="form-row3">
+                            <input type="checkbox" id="title" name="searchBy[]" value="title" {{ 'title' in searchBy ? 'checked' : '' }}>
+                            <label for="title"> Title</label>
+                        </div>
+                        <div class="form-row3">
+                            <input type="checkbox" id="author" name="searchBy[]" value="author" {{ 'author' in searchBy ? 'checked' : '' }}>
+                            <label for="author"> Author</label>
+                        </div>
+                        <div class="form-row3">
+                            <input type="checkbox" id="text" name="searchBy[]" value="text" {{ 'text' in searchBy ? 'checked' : '' }}>
+                            <label for="content"> Content</label>
+                        </div>
+                    </div>
+                    <input type="text" name="search" id="search-bar" placeholder="Search articles..." value="{{ search }}">
+                </div>
+                <hr class="preview-divider">
+                <div class="form-row">
+                    <label for="sort">Sort By:</label>
+                    <select name="sort">
+                        <option value="new-old" {{ sort == 'new-old' ? 'selected' : '' }}>New to old</option>
+                        <option value="old-new" {{ sort == 'old-new' ? 'selected' : '' }}>Old to new</option>
+                        <option value="a-z" {{ sort == 'a-z' ? 'selected' : '' }}>A-Z</option>
+                        <option value="z-a" {{ sort == 'z-a' ? 'selected' : '' }}>Z-A</option>
+                    </select>
+                </div>
+                <hr class="preview-divider">
+                <div class="form-row">
+                    <label for="category">Category:</label>
+                    <select name="category">
+                        <option value="All" {{ category == 'All' ? 'selected' : '' }}>All</option>
+                        <option value="JRPG" {{ category == 'JRPG' ? 'selected' : '' }}>JRPG</option>
+                        <option value="Anime" {{ category == 'Anime' ? 'selected' : '' }}>Anime</option>
+                        <option value="Manga" {{ category == 'Manga' ? 'selected' : '' }}>Manga</option>
+                        <option value="Manhwa" {{ category == 'Manhwa' ? 'selected' : '' }}>Manhwa</option>
+                    </select>
+                </div>
+                <button type="submit" class="button" name="filterArticles" value="filterArticles">Filter</button>
+                <a href="./articles" class="button">Reset</a>
+            </form>
+        </section>
+    </section>
+</main>
+{% endblock %}

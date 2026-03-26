@@ -1,0 +1,98 @@
+.main-content{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    min-height: 80vh;
+}
+
+.article-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    background: linear-gradient(145deg,rgba(188, 211, 224, 1) 0%, rgba(212, 156, 230, 1) 51%, rgba(188, 211, 224, 1) 100%);
+    margin-bottom: 1em;
+    max-height: 1200px;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.left-side-article{
+    flex: 3;
+}
+
+.title-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.controls>form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.control-buttons{
+    background-color: blueviolet;
+    padding: 0.8em 1em;
+    border: none;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.control-buttons:hover{
+    background-color: rgb(54, 12, 94);
+    color: white;
+    cursor: pointer;
+}
+
+.article-text{
+    word-break: break-word;
+    white-space: normal; 
+}
+
+.comment-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 1em 0 1em;
+    padding: 1em;
+    background-color: blanchedalmond;
+}
+
+.comment-data{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.moderation{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.ck-editor__editable {
+  min-height: 200px;
+}
+
+.deleteReasoning{
+    padding-left: 0.5em;
+}

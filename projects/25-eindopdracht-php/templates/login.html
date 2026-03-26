@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+    <base href="http://localhost/CodeCrashers/PHP/25-eindopdracht-php/" target="_self">
+    <base href="http://localhost/CodeCrashers/PHP/25-eindopdracht-php/" target="_self">
+    <script src="https://kit.fontawesome.com/a0a5e50891.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+    <main>
+        <div class="login-content">
+            <form method="post">
+                <div class="form-row">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-row2">
+                    <button name="login">Log In</button>
+                    <a class="login-page-button" href="./register">Register</a>
+                </div>
+                <div class="form-row2">
+                    <a class="login-page-button" href="./home">Back</a>
+                </div>
+            </form>
+            {% if success %}
+                <span class="success">{{ success }}</span>
+            {% endif %}
+            {% if errors is not empty %}
+            <div class="error">
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>

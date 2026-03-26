@@ -1,0 +1,43 @@
+.filter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#search-bar{
+    width: 100%;
+}
+
+.search-results{
+    font-size: 1.5em;
+}
+
+.page-number{
+    color: white;
+}
+
+.active{
+    background-color: rgb(54, 12, 94);
+}
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3em;
+    list-style-type: none;
+}

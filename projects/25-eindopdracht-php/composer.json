@@ -1,0 +1,9 @@
+{
+    "require": {
+        "twig/twig": "3.22.1",
+        "symfony/mailer": "^7.4"
+    },
+    "autoload": {
+		"classmap": ["classes"]
+	}
+}

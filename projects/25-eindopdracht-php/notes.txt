@@ -1,0 +1,3 @@
+- Check for consistency in font-sizes, gaps, margins, paddings etc
+- Clean up html, css and php files
+- Comments stay in the recent comments after the article got removed

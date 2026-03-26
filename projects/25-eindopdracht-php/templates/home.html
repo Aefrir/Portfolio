@@ -1,0 +1,97 @@
+{# Child template "home.html" #}
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block styles %}
+<link type="text/css" rel="stylesheet" href="css/home.css">
+<link type="text/css" rel="stylesheet" href="css/articleListingStructure.css">
+{% endblock %}
+{% block content %}
+<main>
+    <section class="categories">
+        <a href="./articles?sort=new-old&category=JRPG" class="category-bg-jrpg">
+            <div class="preview-text">
+                <hr class="category-divider">
+                <span>JRPG</span>
+            </div>
+        </a>
+
+        <a href="./articles?sort=new-old&category=Anime" class="category-bg-anime">
+            <div class="preview-text">
+                <hr class="category-divider">
+                <span>Anime</span>
+            </div>
+        </a>
+
+        <a href="./articles?sort=new-old&category=Manga" class="category-bg-manga">
+            <div class="preview-text">
+                <hr class="category-divider">
+                <span>Manga</span>
+            </div>
+        </a>
+
+        <a href="./articles?sort=new-old&category=Manhwa" class="category-bg-manhwa">
+            <div class="preview-text">
+                <hr class="category-divider">
+                <span>Manhwa</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="main-content">
+        <section class="article-list">
+            <div class="home-title">
+                <h2 class="left-side-title">Latest Articles</h2>
+                <hr class="title-divider">
+            </div>
+            {% for article in articles|slice(0, 5) %}
+            <article class="article-preview">
+                <div class="article-image">
+                    <a href="./{{article.categoryslug}}/{{article.titleslug}}"><img src="uploads/{{article.image}}" alt="{{article.image}}" width="200" height="200"></a>
+                </div>
+                <div class="article-preview-right">
+                    <div class="article-preview-top">
+                        <h3>
+                            <a class="article-titles" href="./{{article.categoryslug}}/{{article.titleslug}}">{{article.title}}</a>
+                        </h3>
+                        <p class="article-preview-credits">
+                            <span class="article-preview-category">{{article.category}}</span> - by 
+                            <span class="credits">{{article.author}}</span> on 
+                            <span class="credits">{{article.date|date('Y-m-d') }}</span>
+                        </p>
+                    </div>
+                    <div class="article-preview-bottom">
+                        <p class="excerpt">{{article.excerpt|raw}}</p>
+                    </div>
+                </div>
+            </article>
+            <hr class="preview-divider">
+            {% endfor %}
+            <a href="./articles" class="button">Continue Reading</a>
+        </section>
+        <section class="right-side">
+            <div class="home-title">
+                <h3>Recent Comments</h3>
+                <hr class="title-divider">
+            </div>
+            
+            {% for comment in comments|slice(0, 10)  %}
+                {% if comment.username != '[deleted]' %}
+                <article class="comment-data">
+                    <div class="latest-comment-top">
+                        <p><span class="credits">{{comment.username}} </span>posted on 
+                            {% for article in articles %}
+                                {% if comment.article_id == article.id %}
+                                    <a class="comment-to-article" href="./{{article.categoryslug}}/{{article.titleslug}}">{{ article.title }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </p>
+                    </div>
+                    <p>{{comment.excerpt|raw}}</p>
+                </article>
+                <hr class="preview-divider">
+                {% endif %}
+            {% endfor %}
+        </section>
+    </section>
+</main>
+{% endblock %}

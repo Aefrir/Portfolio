@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?page=article&category=$1&slug=$2 [L,QSA]
+RewriteRule ^([a-z0-9\-]+)/?$ index.php?page=$1 [L,QSA]

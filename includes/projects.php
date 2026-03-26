@@ -43,9 +43,6 @@
       <section class="bottom-section">
         <p>I created multiple JSON-LD schemas and XML sitemaps for different webpages to improve their search engine visibility. Along the way, I developed a solid understanding of basic SEO principles and how to optimize pages for better ranking.</p>
         <!-- <p>Due to how SEO is done, it is hard for me to provide a good product without showing the underlying code. Hence why I am linking my repository instead.</p> -->
-        <div class="links">
-          <a href="#" class="project-link" target="_blank">Repository</a>
-        </div>
       </section>
     </article>
     <article>
@@ -76,6 +73,9 @@
         <p>I'm currently completing my PHP course, where I've learned the fundamentals of backend development. I'm now progressing toward more advanced topics like object-oriented programming (OOP) to build cleaner and more scalable applications.</p>
         <div class="links">
           <a href="projects/php/index.php" class="project-link" target="_blank">Session Webpage</a>
+        </div>
+        <div class="links">
+          <a href="projects/25-eindopdracht-php/home" class="project-link" target="_blank">Final Assignment</a>
         </div>
       </section>
     </article>

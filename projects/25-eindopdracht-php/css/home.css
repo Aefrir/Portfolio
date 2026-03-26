@@ -1,0 +1,87 @@
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.category-bg-jrpg, .category-bg-anime, .category-bg-manga, .category-bg-manhwa{
+    flex: 1 1 20%;
+    max-width: 300px;
+    height: 300px;
+    transition: transform 0.3s ease-in;
+}
+
+.category-bg-jrpg{
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.012), rgba(0, 0, 0, 1)),
+        url("../images/jrpg2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.category-bg-anime{
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.012), rgba(0,0,0,1)),
+        url("../images/anime2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.category-bg-manga{
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.012), rgba(0,0,0,1)),
+        url("../images/manga2.webp");
+    background-size: cover;
+    background-position: center;
+}
+.category-bg-manhwa{
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.012), rgba(0,0,0,1)),
+        url("../images/manhwa2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.preview-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5em;
+    transition: color 0.3s ease-in;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.preview-text>span{
+    font-family: "Lugrasimo", cursive;
+    margin: 0.5em 0 0.5em;
+    font-weight: bold;
+}
+
+.category-divider{
+    width: 40%;
+    transition: width 0.5s ease;
+}
+
+.preview-text:hover .category-divider{
+    width: 70%;
+}
+
+.category-bg-jrpg:hover, .category-bg-anime:hover, .category-bg-manga:hover, .category-bg-manhwa:hover{
+    transform: scale(1.05);
+}
+
+.category-bg-jrpg:hover .preview-text, .category-bg-anime:hover .preview-text>span, .category-bg-manga:hover .preview-text>span, .category-bg-manhwa:hover .preview-text>span{
+    color: rgba(212, 156, 230, 1);
+}
+
+.comment-to-article{
+    color:blue;
+    transition: color 0.2s ease;
+}
+
+.comment-to-article:hover{
+    color:rgb(255, 255, 255);
+    text-decoration: underline;
+}

@@ -1,0 +1,66 @@
+{# Child template "createArticle.html" #}
+{% extends "base.html" %}
+
+{% block title %}Create New Article{% endblock %}
+{% block styles %}
+<link type="text/css" rel="stylesheet" href="css/createArticle.css">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h2>Add New Post</h2>
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="existingImage" value="{{ article.image }}">
+        <input type="text" name="title" placeholder="Enter title here..." id="article-title-input" value="{{article.title ?? ''}}" maxlength="100">
+        <div class="form-row">
+            <input type="file" name="articleImage" id="file-input">
+            <div class="category-select">
+                <label class="category-box jrpg">
+                <input type="radio" name="category" value="JRPG" {% if article.category == 'JRPG' %}checked{% endif %}>
+                <span>JRPG</span>
+                </label>
+
+                <label class="category-box anime">
+                <input type="radio" name="category" value="Anime" {% if article.category == 'Anime' %}checked{% endif %}>
+                <span>Anime</span>
+                </label>
+
+                <label class="category-box manga">
+                <input type="radio" name="category" value="Manga" {% if article.category == 'Manga' %}checked{% endif %}>
+                <span>Manga</span>
+                </label>
+
+                <label class="category-box manhwa">
+                <input type="radio" name="category" value="Manhwa" {% if article.category == 'Manhwa' %}checked{% endif %}>
+                <span>Manhwa</span>
+                </label>
+            </div>
+        </div>
+        {% if article.image %}
+            <p>Current image:</p>
+            <img src="uploads/{{ article.image }}" style="max-width: 200px;">
+        {% endif %}
+        <textarea class="txtarea-article-creation" name="articleText" id="editor" maxlength="2000">{{article.text ?? ''}}</textarea>
+        <script>
+            ClassicEditor.create(document.querySelector('#editor'),{
+                toolbar: [ 'bold', 'italic', 'link' ]
+            }).catch(error => console.error(error));
+        </script>
+        {% if editMode %}
+            <input type="hidden" name="article_id" value="{{article.id}}">
+            <button class="button" name="updateArticle">Update Article</button>
+        {% else %}
+            <button class="button" name="postArticle">Post Article</button>
+        {% endif %}
+    </form>
+    {% if errors is not empty %}
+    <div class="error">
+        <ul>
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</main>
+{% endblock %}

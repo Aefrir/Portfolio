@@ -1,0 +1,52 @@
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.category-select{
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+}
+
+span{
+    padding: 0.7em;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: white;
+}
+
+.category-box input {
+    display: none;
+}
+
+.category-box input:checked + span {
+    background-color: rgb(63, 17, 105);
+}
+
+textarea, input{
+    border: solid 1px black;
+}
+
+#article-title-input{
+    font-size: 2em;
+}
+
+#file-input{
+    width: fit-content;
+    padding: 0.5em;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0 0.5em;
+}
+
+.ck-editor__editable {
+  min-height: 500px;
+}

@@ -1,0 +1,58 @@
+{# Parent template "base.html" #}
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+    <base href="http://localhost/CodeCrashers/PHP/25-eindopdracht-php/" target="_self">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    {% block styles %}{% endblock %}
+    <link type="text/css" rel="stylesheet" href="css/main-mobile.css">
+    <script src="https://kit.fontawesome.com/a0a5e50891.js" crossorigin="anonymous"></script>
+    <!-- CKEditor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <!-- -------- -->
+  </head>
+  <body>
+    
+    <header>
+      <nav>
+        <div class="nav-content">
+          <div class="nav-content-left">
+            <h1><a href="./home">Aefrir</a></h1>
+            
+          </div>
+          <div class="nav-content-right">
+            <ul>
+              <li><a href="./home">Home</a></li>
+              <li><a href="./articles">Articles</a></li>
+              {% if username %}
+              <li><a href="./create-article">Add Post</a></li>
+              <li><a href="#"><i class="fa-solid fa-user"></i> {{username}}</a></li>
+              <li><a href="./logout">Logout</a></li>
+              {% else %}
+              <li><a href="./login"><i class="fa-solid fa-user"></i> Login</a></li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+      <section class="footer-content">
+        {% if lastVisit %}
+        <p>Last visit: {{ lastVisit|date('Y-m-d') }}</p>
+        {% else %}
+        <p>Welcome! This is your first visit.</p>
+        {% endif %}
+      </section>
+    </footer>
+  </body>
+</html>
